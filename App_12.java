@@ -15,12 +15,10 @@ import java.util.ArrayDeque;
   
 public class App_12 {
   
-    static boolean rightOrderOfBrackets(String expression)
-    {
+    static boolean rightOrderOfBrackets(String expression) {
         Deque<Character> stack = new ArrayDeque<Character>(); // ArrayDeque быстрее, чем Stack
   
-        for (int i = 0; i < expression.length(); i++) 
-        {
+        for (int i = 0; i < expression.length(); i++) {
             char x = expression.charAt(i);
   
             if (x == '(' || x == '[' || x == '{' || x == '<') 
@@ -62,8 +60,7 @@ public class App_12 {
         return (stack.isEmpty());
     }
   
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите выражение со скобками (например, (), [], {}, <>): ");
         String expression = in.nextLine();
